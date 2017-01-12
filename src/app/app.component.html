@@ -2,5 +2,10 @@
   {{title}}
 </h1>
 
-<input type="text" [(ngModel)]="hoge" required>
-<span *ngIf="hoge==='1'">input is 1</span>
+<form #f="ngForm" novalidate>
+  <input type="text" name="hoge" ngModel required>
+  <p [hidden]="!f.form.dirty || f.form.valid">必須入力です</p>
+</form>
+<ul>
+  <li *ngFor="let item of demoData">{{item.name}}</li>
+</ul>
