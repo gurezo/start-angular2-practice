@@ -4,10 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { IssueComponent } from './issue/issue.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { WikiComponent } from './wiki/wiki.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    IssueComponent,
+    PageNotFoundComponent,
+    WikiComponent
   ],
   imports: [
     BrowserModule,
