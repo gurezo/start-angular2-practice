@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 
 import { routing, appRoutingProviders } from './app.routes';
 
+import { GuardsHomeService } from './home/guards-home.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,10 @@ import { routing, appRoutingProviders } from './app.routes';
     HttpModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [
+    appRoutingProviders,
+    GuardsHomeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
