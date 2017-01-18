@@ -9,6 +9,11 @@ import { PagesComponent } from './pages.component';
 
 import { pagesRouting, pagesRoutingProviders } from './page.routes';
 
+import { GuardsPagesService } from './guards-pages.service';
+import { GuardsIssueService } from './issue/guards-issue.service';
+import { GuardsTopService } from './top/guards-top.service';
+import { GuardsWikiService } from './wiki/guards-wiki.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +21,16 @@ import { pagesRouting, pagesRoutingProviders } from './page.routes';
     WikiModule,
     pagesRouting
   ],
-  declarations: [TopComponent, PagesComponent]
+  providers: [
+    pagesRoutingProviders,
+    GuardsPagesService,
+    GuardsIssueService,
+    GuardsTopService,
+    GuardsWikiService
+  ],
+  declarations: [
+    TopComponent,
+    PagesComponent
+  ]
 })
 export class PagesModule { }
