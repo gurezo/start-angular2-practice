@@ -9,6 +9,8 @@ import { IssueComponent } from './issue/issue.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WikiComponent } from './wiki/wiki.component';
 
+import { routing, appRoutingProviders } from './app.routes';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +22,10 @@ import { WikiComponent } from './wiki/wiki.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
