@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { WikiComponent } from './wiki/wiki.component';
 
 import { routing, appRoutingProviders } from './app.routes';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { routing, appRoutingProviders } from './app.routes';
     HomeComponent,
     IssueComponent,
     PageNotFoundComponent,
-    WikiComponent
+    WikiComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
