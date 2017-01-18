@@ -29,9 +29,9 @@ export class GuardsHomeService implements CanActivate, CanActivateChild, CanDeac
     return true;
   }
 
-  resolve(): boolean {
+  resolve(): HomeComponent {
     console.log('GuardsHomeService.resolve');
-    return true;
+    return;
   }
 
   canLoad(): boolean {

@@ -29,9 +29,9 @@ export class GuardsIssueService implements CanActivate, CanActivateChild, CanDea
     return true;
   }
 
-  resolve(): boolean {
+  resolve(): IssueComponent {
     console.log('GuardsIssueService.resolve');
-    return true;
+    return;
   }
 
   canLoad(): boolean {

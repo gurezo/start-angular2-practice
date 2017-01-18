@@ -29,9 +29,9 @@ export class GuardsPagesService implements CanActivate, CanActivateChild, CanDea
     return true;
   }
 
-  resolve(): boolean {
+  resolve(): PagesComponent {
     console.log('GuardsPagesService.resolve');
-    return true;
+    return;
   }
 
   canLoad(): boolean {

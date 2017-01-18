@@ -29,9 +29,9 @@ export class GuardsTopService implements CanActivate, CanActivateChild, CanDeact
     return true;
   }
 
-  resolve(): boolean {
+  resolve(): TopComponent {
     console.log('GuardsTopService.resolve');
-    return true;
+    return;
   }
 
   canLoad(): boolean {

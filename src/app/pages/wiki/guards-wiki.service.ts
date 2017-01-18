@@ -29,9 +29,9 @@ export class GuardsWikiService implements CanActivate, CanActivateChild, CanDeac
     return true;
   }
 
-  resolve(): boolean {
+  resolve(): WikiComponent {
     console.log('GuardsWikiService.resolve');
-    return true;
+    return;
   }
 
   canLoad(): boolean {
