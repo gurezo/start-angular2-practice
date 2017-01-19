@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { Issue } from './issue';
+import { IssueService } './issue.service';
 
 @Component({
   selector: 'app-issue',
@@ -13,11 +14,13 @@ export class IssueComponent implements OnInit {
   issue: Issue;
   issues: Issue[];
 
-  constructor() { }
+  constructor(
+    private issueService: IssueService
+  ) { }
 
   ngOnInit() {
     this.issue = new Issue;
-    this.issues = [];
+    this.issues = this.issueService.list;
   }
 
   public onSubmit(forms: NgForm): void {
@@ -26,12 +29,12 @@ export class IssueComponent implements OnInit {
       desc: forms.value.desc
     }
 
-    this.issues.push(issue);
+    this.issueService.add(issue);
     forms.reset();
   }
 
   public onDelete(index: number): void {
-    this.issues.splice(index, 1);
+    this.issueService.dedelete(index);
   }
 
 }
