@@ -19,22 +19,5 @@ export class IssueComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.issue = new Issue;
-    this.issues = this.issueService.list;
   }
-
-  public onSubmit(forms: NgForm): void {
-    const issue = {
-      title: forms.value.title,
-      desc: forms.value.desc
-    }
-
-    this.issueService.add(issue);
-    forms.reset();
-  }
-
-  public onDelete(index: number): void {
-    this.issueService.dedelete(index);
-  }
-
 }

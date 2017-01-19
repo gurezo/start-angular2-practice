@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PagesComponent } from './pages.component';
 import { IssueComponent } from './issue/issue.component';
+import { IssueUpdateComponent } from './issue/issue-update/issue-update.component';
 import { TopComponent } from './top/top.component';
 import { WikiComponent } from './wiki/wiki.component';
 
@@ -40,6 +41,7 @@ const pagesRoutes: Routes = [
         resolve: [GuardsIssueService],
         canLoad: [GuardsIssueService],
       },
+      { path: 'issue/update/:id', component: IssueUpdateComponent },
       {
         path: 'wiki',
         component: WikiComponent,

@@ -4,6 +4,11 @@ import { CommonModule } from '@angular/common';
 import { IssueComponent } from './issue.component';
 
 import { IssueService } from './issue.service';
+import { IssueDetailComponent } from './issue-detail/issue-detail.component';
+import { IssueInputComponent } from './issue-input/issue-input.component';
+import { IssueListComponent } from './issue-list/issue-list.component';
+import { IssueUpdateComponent } from './issue-update/issue-update.component';
+
 
 @NgModule({
   imports: [
@@ -11,7 +16,11 @@ import { IssueService } from './issue.service';
     FormsModule
   ],
   declarations: [
-    IssueComponent
+    IssueComponent,
+    IssueDetailComponent,
+    IssueInputComponent,
+    IssueListComponent,
+    IssueUpdateComponent
   ],
   providers: [
     IssueService
