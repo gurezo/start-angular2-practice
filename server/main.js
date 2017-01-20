@@ -1,13 +1,13 @@
 'use strict';
 
 const express = require('express');
-const bofyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const app = express();
 const server = require('http').createServer(app);
 const port = process.env.PORT || 3000;
 
-app.use(bofyParser.json({limit: '50mb'}));
-app.use(bofyParser.urlencode({lextend: true, imit: '50mb'}));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({extended: true, limit: '50mb'}));
 
 app.use(function (req, res, next){
   res.header('Access-Control-Methods', 'GET, PUT, POST, DELETE, OPTION');
