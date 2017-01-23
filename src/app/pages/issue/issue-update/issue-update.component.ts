@@ -15,14 +15,17 @@ import { Issue } from '../issue';
 export class IssueUpdateComponent implements OnInit {
 
   id: number;
+
   title: string;
+
   desc: string;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private issueService: IssueService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.route.params
@@ -31,9 +34,9 @@ export class IssueUpdateComponent implements OnInit {
         return this.issueService.getIssue(this.id);
       })
       .subscribe(issue => {
-        this.title =  issue.title;
+        this.title = issue.title;
         this.desc = issue.desc;
-      })
+      });
   }
 
   public onSubmit(form: NgForm): void {

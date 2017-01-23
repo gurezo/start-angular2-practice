@@ -10,11 +10,11 @@ import { IssueService } from '../issue.service';
 })
 export class IssueListComponent implements OnInit {
 
-  issues: Issue[];
+  private issues: Issue[];
 
-  constructor(
+  constructor (
     private issueService: IssueService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.issueService.allList()
