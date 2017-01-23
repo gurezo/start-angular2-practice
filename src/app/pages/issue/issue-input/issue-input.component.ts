@@ -6,7 +6,7 @@ import { IssueService } from '../issue.service';
 @Component({
   selector: 'app-issue-input',
   templateUrl: './issue-input.component.html',
-  styleUrls: ['./issue-input.component.css']
+  styleUrls: ['./issue-input.component.scss']
 })
 export class IssueInputComponent implements OnInit {
 
