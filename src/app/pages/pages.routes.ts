@@ -14,12 +14,11 @@ import { GuardsWikiService } from './wiki/guards-wiki.service';
 
 const pagesRoutes: Routes = [
   {
-    path: 'pages',
+    path: '',
     component: PagesComponent,
     canActivate: [GuardsPagesService],
     canActivateChild: [GuardsPagesService],
     canDeactivate: [GuardsPagesService],
-    resolve: [GuardsPagesService],
     canLoad: [GuardsPagesService],
     children: [
       { path: '', redirectTo: 'top', pathMatch: 'full' },
@@ -29,8 +28,8 @@ const pagesRoutes: Routes = [
         canActivate: [GuardsTopService],
         canActivateChild: [GuardsTopService],
         canDeactivate: [GuardsTopService],
-        resolve: [GuardsTopService],
         canLoad: [GuardsTopService],
+        data: { title: 'Top' }
       },
       {
         path: 'issue',
@@ -38,18 +37,22 @@ const pagesRoutes: Routes = [
         canActivate: [GuardsIssueService],
         canActivateChild: [GuardsIssueService],
         canDeactivate: [GuardsIssueService],
-        resolve: [GuardsIssueService],
         canLoad: [GuardsIssueService],
+        data: { title: 'Issue' }
       },
-      { path: 'issue/update/:id', component: IssueUpdateComponent },
+      {
+        path: 'issue/update/:id',
+        component: IssueUpdateComponent,
+        data: { title: 'Issue Update' }
+      },
       {
         path: 'wiki',
         component: WikiComponent,
         canActivate: [GuardsWikiService],
         canActivateChild: [GuardsWikiService],
         canDeactivate: [GuardsWikiService],
-        resolve: [GuardsWikiService],
         canLoad: [GuardsWikiService],
+        data: { title: 'Wiki' }
       }
     ]
   }

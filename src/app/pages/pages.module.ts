@@ -4,15 +4,14 @@ import { CommonModule } from '@angular/common';
 import { IssueModule } from './issue/issue.module';
 import { WikiModule } from './wiki/wiki.module';
 
-import { TopComponent } from './top/top.component';
 import { PagesComponent } from './pages.component';
+import { TopComponent } from './top/top.component';
 
-import { pagesRouting, pagesRoutingProviders } from './page.routes';
+import { pagesRouting, pagesRoutingProviders } from './pages.routes';
 
-import { GuardsPagesService } from './guards-pages.service';
-import { GuardsIssueService } from './issue/guards-issue.service';
 import { GuardsTopService } from './top/guards-top.service';
 import { GuardsWikiService } from './wiki/guards-wiki.service';
+import { GuardsIssueService } from './issue/guards-issue.service';
 
 @NgModule({
   imports: [
@@ -23,14 +22,13 @@ import { GuardsWikiService } from './wiki/guards-wiki.service';
   ],
   providers: [
     pagesRoutingProviders,
-    GuardsPagesService,
-    GuardsIssueService,
     GuardsTopService,
-    GuardsWikiService
+    GuardsWikiService,
+    GuardsIssueService
   ],
   declarations: [
-    TopComponent,
-    PagesComponent
+    PagesComponent,
+    TopComponent
   ]
 })
 export class PagesModule { }

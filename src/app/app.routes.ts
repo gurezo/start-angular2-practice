@@ -6,18 +6,22 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { GuardsHomeService } from './home/guards-home.service';
 
-const appRoutes: Routes= [
-  { path: '' , redirectTo: 'home', pathMatch: 'full'},
+const appRoutes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   {
-    path: 'home' ,
+    path: 'home',
     component: HomeComponent,
     canActivate: [GuardsHomeService],
     canActivateChild: [GuardsHomeService],
     canDeactivate: [GuardsHomeService],
-    resolve: [GuardsHomeService],
-    canLoad: [GuardsHomeService]
+    canLoad: [GuardsHomeService],
+    data: {title: 'home'}
   },
-  { path: '**' , component: PageNotFoundComponent }
+  {
+    path: 'pages',
+    loadChildren: './pages/pages.module#PagesModule'
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 export const appRoutingProviders: any[] = [];
