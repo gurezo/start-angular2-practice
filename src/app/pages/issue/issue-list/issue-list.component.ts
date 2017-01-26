@@ -10,7 +10,7 @@ import { IssueService } from '../issue.service';
 })
 export class IssueListComponent implements OnInit {
 
-  private issues: Issue[];
+  issues: Issue[];
 
   constructor (
     private issueService: IssueService

@@ -1,5 +1,5 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-  <input type="text" name="title" ngModel required plcaeholder="title">
-  <textarea name="desc" ngModel required plcaeholder="desc"></textarea>
-  <button type="submit" [disabled]="!f.forms.valid">登録</button>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)"novalidate>
+  <input name="title" ngModel required placeholder="title">
+  <textarea name="desc" ngModel required placeholder="desc"></textarea>
+  <button type=submit [disabled]="!f.form.valid">登録</button>
 </form>

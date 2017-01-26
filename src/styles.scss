@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 body {
   margin: 0;
 }
@@ -14,6 +15,7 @@ section {
 button {
   width: 100px;
   text-align: center;
+  line-height: 32px;
   outline: none;
   background-color: #FFFFFF;
   border: 2px solid #333333;
@@ -26,6 +28,6 @@ input, textarea {
   padding: 7px 0;
   font-size: 1.2rem;
   border: 1px solid #333333;
-  font-size: 1rem;
+  box-sizing: border-box;
   background-color: #FFFFFF;
 }
